@@ -10,8 +10,8 @@ ini_set("display_errors", 1);
  * @author   Taylor Otwell <taylor@laravel.com>
  */
 
- print_r("fdsfdddd");
- die();
+//  print_r("fdsfdddd");
+//  die();
 
 define('LARAVEL_START', microtime(true));
 
