@@ -10,9 +10,6 @@ ini_set("display_errors", 1);
  * @author   Taylor Otwell <taylor@laravel.com>
  */
 
-//  print_r("fdsfdddd");
-//  die();
-
 define('LARAVEL_START', microtime(true));
 
 /*
@@ -28,6 +25,9 @@ define('LARAVEL_START', microtime(true));
 */
 
 require __DIR__.'/vendor/autoload.php';
+
+ print_r("fdsfdddd");
+ die();
 
 /*
 |--------------------------------------------------------------------------
