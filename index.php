@@ -58,10 +58,10 @@ $response = $kernel->handle(
     $request = Illuminate\Http\Request::capture()
 );
 
+$response->send();
+
+
 print_r("fdsfdddd");
 die();
-
-
-$response->send();
 
 $kernel->terminate($request, $response);
