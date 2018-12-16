@@ -40,9 +40,6 @@ require __DIR__.'/vendor/autoload.php';
 
 $app = require_once __DIR__.'/bootstrap/app.php';
 
-print_r("fdsfdddd");
-die();
-
 /*
 |--------------------------------------------------------------------------
 | Run The Application
@@ -60,6 +57,10 @@ $kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
 $response = $kernel->handle(
     $request = Illuminate\Http\Request::capture()
 );
+
+print_r("fdsfdddd");
+die();
+
 
 $response->send();
 
