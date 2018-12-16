@@ -7,7 +7,8 @@
  * @author   Taylor Otwell <taylor@laravel.com>
  */
 
- dd("fdsfdddd");
+ print_r("fdsfdddd");
+ die();
 
 define('LARAVEL_START', microtime(true));
 
