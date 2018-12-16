@@ -60,7 +60,6 @@ $response = $kernel->handle(
 
 $response->send();
 
-
 print_r("fdsfdddd");
 die();
 
