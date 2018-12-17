@@ -28,7 +28,7 @@ class Expense extends Model
     }
 
     /**
-     * The genres that belong to the film.
+     * The category that belong to the expense.
      */
     public function category()
     {

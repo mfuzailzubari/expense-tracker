@@ -16,7 +16,6 @@ class ExpenseController extends Controller
         $expenses = Expense::where('created_by', Auth::user()->id)->get();
         foreach($expenses as $expense)
         {
-            // dd($expense->category->name);
             $expense['category'] = $expense->category;
         }
         return $expenses;

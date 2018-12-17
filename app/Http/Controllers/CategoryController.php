@@ -11,7 +11,28 @@ class CategoryController extends Controller
     //
     public function index()
     {
-        return Category::where('created_by', Auth::user()->id)->get();
+        $categories = Category::where('created_by', Auth::user()->id)->get();
+        foreach($categories as $category)
+        {
+            // dd($expense->category->name);
+            $category['expenses'] = $category->expenses()->get();
+        }
+        return $categories;
+    }
+
+    public function getCategoryExpenses()
+    {
+        $categories = Category::where('created_by', Auth::user()->id)->get();
+        foreach($categories as $category)
+        {
+            $total = 0;
+            $expenses = $category->expenses()->get();
+            foreach($expenses as $expense) {
+                $total += $expense->amount;
+            }
+            $category['category_total'] = $total;
+        }
+        return $categories;
     }
  
     public function show($id)
