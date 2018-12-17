@@ -13,7 +13,7 @@ class Expense extends Model
      * @var array
      */
     protected $fillable = [
-        'note', 'amount', 'date', 'category_id', 'created_by'
+        'note', 'amount', 'date', 'category_id', 'created_by',
     ];
 
     public static function boot()
@@ -25,5 +25,13 @@ class Expense extends Model
             $table->created_by = Auth::user()->id;
         });
 
+    }
+
+    /**
+     * The genres that belong to the film.
+     */
+    public function categories()
+    {
+        return $this->belongsToMany('App\Models\Category');
     }
 }
