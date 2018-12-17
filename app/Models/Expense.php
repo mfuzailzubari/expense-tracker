@@ -30,8 +30,8 @@ class Expense extends Model
     /**
      * The genres that belong to the film.
      */
-    public function categories()
+    public function category()
     {
-        return $this->belongsToMany('App\Models\Category');
+        return $this->belongsTo('App\Models\Category');
     }
 }

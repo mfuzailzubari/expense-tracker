@@ -13,7 +13,13 @@ class ExpenseController extends Controller
     //
     public function index()
     {
-        return Expense::where('created_by', Auth::user()->id)->get();
+        $expenses = Expense::where('created_by', Auth::user()->id)->get();
+        foreach($expenses as $expense)
+        {
+            // dd($expense->category->name);
+            $expense['category'] = $expense->category;
+        }
+        return $expenses;
     }
  
     public function show($id)
