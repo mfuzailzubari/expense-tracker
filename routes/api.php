@@ -22,6 +22,7 @@ Route::group(['middleware' => 'auth:api'], function(){
 
     // CATEGORY
     Route::get('categories', 'CategoryController@index');
+    Route::get('categories-expense', 'CategoryController@getCategoryExpenses');
     Route::get('categories/{category}', 'CategoryController@show');
     Route::post('categories', 'CategoryController@store');
     Route::put('categories/{category}', 'CategoryController@update');
